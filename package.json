@@ -33,5 +33,10 @@
       "bcrypt",
       "sharp"
     ]
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
   }
 }
