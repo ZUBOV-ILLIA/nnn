@@ -178,6 +178,8 @@ export async function fetchCustomers() {
       ORDER BY name ASC
     `;
 
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    
     return customers;
   } catch (err) {
     console.error('Database Error:', err);

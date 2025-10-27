@@ -7,10 +7,13 @@ import {
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
 import { Button } from '@/app/ui/button';
+import { fetchCustomers } from '@/app/lib/data';
 
-export default function Form({ customers }: { customers: CustomerField[] }) {
+export default async function Form({ action }: { action: (formData: FormData) => Promise<void> }) {
+  const customers = await fetchCustomers();
+
   return (
-    <form>
+    <form action={action}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
         {/* Customer Name */}
         <div className="mb-4">
