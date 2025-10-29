@@ -20,10 +20,10 @@ export default function Search({ placeholder }: { placeholder: string }) {
       params.delete('query');
     }
 
-    console.log(params.toString())
+    console.log(params.toString());
 
     router.replace(`${pathname}?${params.toString()}`);
-  }, 300)
+  }, 300);
 
   return (
     <div className="relative flex flex-1 flex-shrink-0">

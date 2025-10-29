@@ -4,8 +4,6 @@ import { createInvoice } from '@/app/lib/actions';
 import { Suspense } from 'react';
 
 export default async function Page() {
-  
- 
   return (
     <main>
       <Breadcrumbs
@@ -19,9 +17,9 @@ export default async function Page() {
         ]}
       />
 
-    <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Loading...</div>}>
         <Form action={createInvoice} />
-    </Suspense>
+      </Suspense>
     </main>
   );
 }

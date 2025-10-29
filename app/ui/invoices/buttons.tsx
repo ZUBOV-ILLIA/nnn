@@ -26,7 +26,6 @@ export function UpdateInvoice({ id }: { id: string }) {
 }
 
 export function DeleteInvoice({ id }: { id: string }) {
-
   async function action() {
     'use server';
 

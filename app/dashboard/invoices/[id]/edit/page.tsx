@@ -1,7 +1,7 @@
 import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import EditInvoiceWrapper from '@/app/ui/invoices/EditInvoiceWrapper';
 import { Suspense } from 'react';
- 
+
 export default async function Page(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
   const id = params.id;
